@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 function Chat({ socket, username, room }) {
   const [currentMessage, setCurrentMessage] = useState("");
   const [messageList, setMessageList] = useState([]);
+  const chatContainerRef = useRef(null);
 
   const sendMessage = async () => {
     if (currentMessage !== "") {
@@ -28,12 +29,16 @@ function Chat({ socket, username, room }) {
     });
   }, [socket]);
 
+  useEffect(() => {
+    chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+  }, [messageList]);
+
   return (
     <div className="chat-window">
       <div className="chat-header">
         <p>Live Chat</p>
       </div>
-      <div className="chat-body">
+      <div className="chat-body" ref={chatContainerRef}>
         <div className="message-container">
           {messageList.map((messageContent) => {
             return (
