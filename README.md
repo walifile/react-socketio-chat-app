@@ -38,6 +38,12 @@ The backend of this application was built with Node.js, Express, Socket.IO, and 
 - `socket.js`: The file that contains the Socket.IO logic for handling events such as `join_room` and `send_message`.
 - `cors`: A middleware that allows cross-origin resource sharing between the client and the server.
 
+## Support
+
+If you found this project helpful and want to support me, you can buy me a coffee at:
+
+[![Buy me a coffee](https://img.shields.io/badge/-Buy%20me%20a%20coffee-orange?logo=buy-me-a-coffee&logoColor=white&labelColor=orange&color=white)](https://www.buymeacoffee.com/waliahmad9)
+
 ## My YouTube Channel
 
 Check out my YouTube channel, Coding Circulate, for more web development content: [Coding Circulate](https://www.youtube.com/@codingcirculate/featured)
